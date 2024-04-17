@@ -3,8 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border : none;
+        }
+        .main_form {
+            margin: 5%;
+            width: 60%;
+            height: 80%;
+            background-color: bisque;
+            box-sizing: border-box;
+            display: inline-block;
+            border: 1px solid black;
+        }
+
+        .title {
+            margin: 10px 0px 10px 20px;
+            font-size: 24px;
+            color: blue;
+        }
+
+        .inputData {
+            margin: 10px 0px 10px 20px;
+            font-size: 15px;
+        }
+
+        .signupSubmit {
+            display: inline-block;
+
+        }
+
+        .backHome {
+            display: inline-block;
+        }
+
+        .button {
+            margin-left: 10px;
+            background-color: aliceblue;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-  회원가입입니다.
+<div class="main_form">
+    <div class="title">회 원 가 입</div>
+    <form action="/signup" method="post">
+        <div class="inputData">
+            아이디 : <input type="text" name="id">
+            <button type="button" class="button">중복확인</button>
+        </div>
+        <div class="inputData">비밀번호 : <input type="password" name="password"></div>
+        <div class="inputData">팀 명 : <input type="text" name="teamName"></div>
+        <div class="inputData">
+            e-mail : <input type="text" name="email">
+            <button type="button" class="button">인증</button>
+        </div>
+        <div class="signupSubmit">
+            <input type="submit" value="가입하기">
+            <button type="button">홈으로</button>
+        </div>
+    </form>
+</div>
 </body>
 </html>

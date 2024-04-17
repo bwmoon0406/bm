@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/basketballmanager")
 public class HomeController {
+
     @GetMapping("/home")
     public String home() {
         return "home";

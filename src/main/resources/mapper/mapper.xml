@@ -2,6 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="repository 태그사용명">
-
+<mapper namespace="bm">
+    <insert id="inputSignup" parameterType="memberDTO">
+        insert into login_table(id, email, password, teamName)
+        values(#{id}, #{email}, #{password}, #{teamName})
+    </insert>
 </mapper>
