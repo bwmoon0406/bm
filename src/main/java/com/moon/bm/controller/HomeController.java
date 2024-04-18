@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/basketballmanager")
 public class HomeController {
 
     @GetMapping("/home")

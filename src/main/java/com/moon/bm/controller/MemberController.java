@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/basketballmanager")
 public class MemberController {
     private final MemberService memberService;
 
@@ -20,8 +19,9 @@ public class MemberController {
     }
 
     @PostMapping("/signup")
-    public String inputSignup(MemberDTO memberDTO){
-        memberService.inputSignup(memberDTO);
-        return "redirect:/home";
+    public String signup(MemberDTO memberDTO){
+        memberService.signup(memberDTO);
+        System.out.println("memberDTO = " + memberDTO);
+        return "home";
     }
 }
