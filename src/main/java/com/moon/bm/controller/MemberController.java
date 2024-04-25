@@ -13,15 +13,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MemberController {
     private final MemberService memberService;
 
+    @GetMapping("/home")
+    public String home() {
+        return "home";
+    }
+
     @GetMapping("/signup")
     public String signup() {
         return "signup";
     }
 
     @PostMapping("/signup")
-    public String signup(MemberDTO memberDTO){
+    public String signup(MemberDTO memberDTO) {
         memberService.signup(memberDTO);
         System.out.println("memberDTO = " + memberDTO);
-        return "home";
+        return "login";
     }
 }

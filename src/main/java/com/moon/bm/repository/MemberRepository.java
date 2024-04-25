@@ -13,4 +13,9 @@ public class MemberRepository {
     public void signup(MemberDTO memberDTO) {
         sql.insert("bm.signup", memberDTO);
     }
+
+    public void sign_in(MemberDTO memberDTO) {
+        sql.selectList("bm.sign_in", memberDTO);
+    }
+
 }

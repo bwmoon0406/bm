@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class HomeController {
 
-    @GetMapping("/home")
+    @GetMapping("")
     public String home() {
-        return "home";
+        return "login";
     }
 }

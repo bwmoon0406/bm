@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #signup {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="loginWrapper">
+    <form action="/sign_in" method="post">
+    <div class="title">Basketball Manager</div>
+    <div><label><input type="text" name="id" placeholder="ID를 입력해주세요"></label></div>
+    <div><label><input type="password" name="password" placeholder="*******"></label></div>
+    <div class="button"><input type="submit" value="로그인"></div>
+    <div class="button" id="signup" onclick="move_sign_up()">회원가입</div>
+    </form>
+</div>
+<script>
+    function move_sign_up() {
+        window.location.href = "/signup";
+    }
+</script>
+</body>
+</html>

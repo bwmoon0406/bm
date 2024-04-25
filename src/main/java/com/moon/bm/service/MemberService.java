@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class MemberService {
     private final MemberRepository memberRepository;
+
     public void signup(MemberDTO memberDTO) {
         memberRepository.signup(memberDTO);
     }
 }
-

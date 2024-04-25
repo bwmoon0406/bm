@@ -2,9 +2,9 @@
 drop table if exists login_table;
 create table login_table
 (
-	id varchar(30) primary key, 
-	email varchar(30),
-    password varchar(30),
-    teamName varchar(30)
+	id varchar(30) primary key not null, 
+	email varchar(30) not null,
+    password varchar(30) not null,
+    teamName varchar(30) not null
 );
-select login_table;
+select * from login_table;
