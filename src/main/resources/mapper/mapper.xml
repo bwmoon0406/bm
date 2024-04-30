@@ -7,4 +7,8 @@
         insert into login_table(id, password, teamName, email)
         values(#{id},#{password},#{teamName},#{email})
     </insert>
+    <insert id="addPlayer" parameterType="playerInfoDTO">
+        insert into player_table(playerName, position, age, height, backNumber)
+        values(#{playerName}, #{position}, #{age}, #{height}, #{backNumber})
+    </insert>
 </mapper>

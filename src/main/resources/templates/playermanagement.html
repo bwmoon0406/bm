@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    * {
+    padding : 0;
+    margin: 0;
+    border : none;
+    }
+
+    .main_wrapper {
+    background-color: rgb(134, 188, 250);
+    height: 100%;
+    width: 50%;
+    border: 1px solid black;
+    }
+
+    .title_wrapper {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .addplayer_wrapper {
+        margin-left: 20px;
+    }
+
+    .input_information {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .add_button {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-left : 10px;
+        padding-right: 10px;
+    }
+
+    </style>
+</head>
+<body>
+<div>라벨줄</div>
+<div class="main_wrapper">
+    <div class="title_wrapper">1. 선수 추가</div>
+    <div class="addplayer_wrapper">
+        <form action="addplayer" method="post">
+            <div class="input_information">선수명 : <input type="text" name="playerName"></div>
+            <div class="input_information">포지션 : <input type="text" name="position"></div>
+            <div class="input_information">나  이 : <input type="text" name="age"></div>
+            <div class="input_information">키 : <input type="text" name="height"></div>
+            <div class="input_information">백넘버 : <input type="text" name="backNumber"></div>
+            <input type="submit" value="등록" class="add_button">
+        </form>
+    </div>
+    <div class="title_wrapper">2. 선수 정보 수정/삭제</div>
+    <div class="modify&delete_wrapper">
+
+    </div>
+
+</div>
+</body>
+</html>

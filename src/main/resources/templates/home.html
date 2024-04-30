@@ -8,9 +8,14 @@
     홈 화면 입니다.
     <div class="homeWrapper">
         <div>1. 새게임</div>
-        <div>2. 선수관리</div>
+        <div onclick="go_manage()">2. 선수관리</div>
         <div>3. 기록실</div>
         <div>로그아웃</div>
     </div>
+<script>
+    function go_manage(){
+    window.location.href="/playermanagement";
+    }
+</script>
 </body>
 </html>
