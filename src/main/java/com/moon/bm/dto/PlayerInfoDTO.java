@@ -19,4 +19,13 @@ public class PlayerInfoDTO {
     private int turnover;
     private int point;
     private int backNumber;
+    private double averagePoint;
+    private double averageAssist;
+    private double averageSteel;
+    private double averageBlock;
+    private double averageRebound;
+    private double averageOr;
+    private double averageDr;
+    private double averageTurnover;
+    private double averageGame;
 }

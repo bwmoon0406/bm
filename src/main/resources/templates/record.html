@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      border : none;
+      }
+
+      .table_wrapper {
+        width: 100%;
+        background-color: rgb(170, 245, 170);
+      }
+
+      .table {
+        display: table;
+        width:100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      .table_header, .table_body {
+        display: table-row-group;
+      }
+
+      .table_cell {
+        display: table-cell;
+        padding: 8px;
+        border: 1px solid black;
+      }
+
+      .table_row {
+        display: table-row;
+        }
+
+      .title {
+        margin: 0px 0px 20px 10px;
+        padding-top: 20px;
+        font-size: 25px;
+        color: blue;
+      }
+
+      .innerTitle {
+        margin: 0px 0px 20px 10px;
+        padding-top: 20px;
+        font-size: 25px;
+        color: rgb(204, 248, 100);
+      }
+
+    </style>
+</head>
+<body>
+<div class="table_wrapper">
+    <div class="title">선수별 쿼터 평균 기록</div>
+    <div class="table">
+        <div class="table_header">
+            <div class="table_cell">순번</div>
+            <div class="table_cell">선수명</div>
+            <div class="table_cell">포지션</div>
+            <div class="table_cell">백넘버</div>
+            <div class="table_cell">키</div>
+            <div class="table_cell">득점</div>
+            <div class="table_cell">어시</div>
+            <div class="table_cell">스틸</div>
+            <div class="table_cell">블록</div>
+            <div class="table_cell">리바운드</div>
+            <div class="table_cell">공리</div>
+            <div class="table_cell">수리</div>
+            <div class="table_cell">턴오버</div>
+            <div class="table_cell">게임수</div>
+        </div>
+        <div class="table_body">
+            <div th:each="allList, index : ${allList}" class="table_row">
+                <div class="table_cell" th:text="${index.index+1}"></div>
+                <div class="table_cell" th:text="${allList.playerName}"></div>
+                <div class="table_cell" th:text="${allList.position}"></div>
+                <div class="table_cell" th:text="${allList.backNumber}"></div>
+                <div class="table_cell" th:text="${allList.height}"></div>
+                <div class="table_cell" th:text="${allList.averagePoint}"></div>
+                <div class="table_cell" th:text="${allList.averageAssist}"></div>
+                <div class="table_cell" th:text="${allList.averageSteel}"></div>
+                <div class="table_cell" th:text="${allList.averageBlock}"></div>
+                <div class="table_cell" th:text="${allList.averageRebound}"></div>
+                <div class="table_cell" th:text="${allList.averageOr}"></div>
+                <div class="table_cell" th:text="${allList.averageDr}"></div>
+                <div class="table_cell" th:text="${allList.averageTurnover}"></div>
+                <div class="table_cell" th:text="${allList.averageGame}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="title">기록별 Top5</div>
+    <div class="innerTitle">득점 Top5(쿼터)</div>
+    <div class="table">
+        <div class="table_header">
+            <div class="table_cell">순번</div>
+            <div class="table_cell">선수명</div>
+            <div class="table_cell">포지션</div>
+            <div class="table_cell">백넘버</div>
+            <div class="table_cell">누적득점</div>
+            <div class="table_cell">평균득점</div>
+        </div>
+        <div class="table_body">
+            <div th:each="top5Point, index : ${top5Point}" class="table_row">
+                <div class="table_cell" th:text="${index.index+1}"></div>
+                <div class="table_cell" th:text="${top5Point.playerName}"></div>
+                <div class="table_cell" th:text="${top5Point.position}"></div>
+                <div class="table_cell" th:text="${top5Point.backNumber}"></div>
+                <div class="table_cell" th:text="${top5Point.point}"></div>
+                <div class="table_cell" th:text="${top5Point.averagePoint}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

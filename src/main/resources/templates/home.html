@@ -5,17 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-    홈 화면 입니다.
+    메인화면 입니다.
     <div class="homeWrapper">
         <div>1. 새게임</div>
         <div onclick="go_manage()">2. 선수관리</div>
-        <div>3. 기록실</div>
+        <div onclick="go_record()">3. 기록실</div>
         <div>로그아웃</div>
     </div>
 <script>
     function go_manage(){
     window.location.href="/playermanagement";
     }
+
+    function go_record(){
+    window.location.href="/record";
+    }
+
 </script>
 </body>
 </html>
