@@ -47,4 +47,23 @@ public class MainService {
         playerInfoDTO.setAverageTurnover(averageTurnover);
         playerInfoDTO.setAverageTurnover(averageGame);
     }
+
+    public List<PlayerInfoDTO> findTop5Assist() {
+        return mainRepository.findTop5Assist();
+    }
+
+    public List<PlayerInfoDTO> findTop5Steel() {
+        return mainRepository.findTop5Steel();
+    }
+
+    public List<PlayerInfoDTO> findTop5Block(){
+        return mainRepository.findTop5Block();
+    }
+    public List<PlayerInfoDTO> findTop5Rebound(){
+        return mainRepository.findTop5Rebound();
+    }
+
+    public List<PlayerInfoDTO> findWorst5Turnover(){
+        return mainRepository.findWorst5Turnover();
+    }
 }

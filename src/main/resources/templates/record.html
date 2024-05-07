@@ -113,6 +113,111 @@
             </div>
         </div>
     </div>
+    <div class="innerTitle">어시스트 Top5(쿼터)</div>
+    <div class="table">
+        <div class="table_header">
+            <div class="table_cell">순번</div>
+            <div class="table_cell">선수명</div>
+            <div class="table_cell">포지션</div>
+            <div class="table_cell">백넘버</div>
+            <div class="table_cell">누적어시</div>
+            <div class="table_cell">평균어시</div>
+        </div>
+        <div class="table_body">
+            <div th:each="top5Assist, index : ${top5Assist}" class="table_row">
+                <div class="table_cell" th:text="${index.index+1}"></div>
+                <div class="table_cell" th:text="${top5Assist.playerName}"></div>
+                <div class="table_cell" th:text="${top5Assist.position}"></div>
+                <div class="table_cell" th:text="${top5Assist.backNumber}"></div>
+                <div class="table_cell" th:text="${top5Assist.Assist}"></div>
+                <div class="table_cell" th:text="${top5Assist.averageAssist}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="innerTitle">스틸 Top5(쿼터)</div>
+    <div class="table">
+        <div class="table_header">
+            <div class="table_cell">순번</div>
+            <div class="table_cell">선수명</div>
+            <div class="table_cell">포지션</div>
+            <div class="table_cell">백넘버</div>
+            <div class="table_cell">누적스틸</div>
+            <div class="table_cell">평균스틸</div>
+        </div>
+        <div class="table_body">
+            <div th:each="top5Steel, index : ${top5Steel}" class="table_row">
+                <div class="table_cell" th:text="${index.index+1}"></div>
+                <div class="table_cell" th:text="${top5Steel.playerName}"></div>
+                <div class="table_cell" th:text="${top5Steel.position}"></div>
+                <div class="table_cell" th:text="${top5Steel.backNumber}"></div>
+                <div class="table_cell" th:text="${top5Steel.steel}"></div>
+                <div class="table_cell" th:text="${top5Steel.averageSteel}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="innerTitle">블록 Top5(쿼터)</div>
+    <div class="table">
+        <div class="table_header">
+            <div class="table_cell">순번</div>
+            <div class="table_cell">선수명</div>
+            <div class="table_cell">포지션</div>
+            <div class="table_cell">백넘버</div>
+            <div class="table_cell">누적블록</div>
+            <div class="table_cell">평균블록</div>
+        </div>
+        <div class="table_body">
+            <div th:each="top5Block, index : ${top5Block}" class="table_row">
+                <div class="table_cell" th:text="${index.index+1}"></div>
+                <div class="table_cell" th:text="${top5Block.playerName}"></div>
+                <div class="table_cell" th:text="${top5Block.position}"></div>
+                <div class="table_cell" th:text="${top5Block.backNumber}"></div>
+                <div class="table_cell" th:text="${top5Block.block}"></div>
+                <div class="table_cell" th:text="${top5Block.averageBlock}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="innerTitle">리바 Top5(쿼터)</div>
+    <div class="table">
+        <div class="table_header">
+            <div class="table_cell">순번</div>
+            <div class="table_cell">선수명</div>
+            <div class="table_cell">포지션</div>
+            <div class="table_cell">백넘버</div>
+            <div class="table_cell">누적리바</div>
+            <div class="table_cell">평균리바</div>
+        </div>
+        <div class="table_body">
+            <div th:each="top5Rebound, index : ${top5Rebound}" class="table_row">
+                <div class="table_cell" th:text="${index.index+1}"></div>
+                <div class="table_cell" th:text="${top5Rebound.playerName}"></div>
+                <div class="table_cell" th:text="${top5Rebound.position}"></div>
+                <div class="table_cell" th:text="${top5Rebound.backNumber}"></div>
+                <div class="table_cell" th:text="${top5Rebound.rebound}"></div>
+                <div class="table_cell" th:text="${top5Rebound.averageRebound}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="innerTitle">턴오버 Worst5(쿼터)</div>
+    <div class="table">
+        <div class="table_header">
+            <div class="table_cell">순번</div>
+            <div class="table_cell">선수명</div>
+            <div class="table_cell">포지션</div>
+            <div class="table_cell">백넘버</div>
+            <div class="table_cell">누적실책</div>
+            <div class="table_cell">평균실책</div>
+        </div>
+        <div class="table_body">
+            <div th:each="worst5Turnover, index : ${worst5Turnover}" class="table_row">
+                <div class="table_cell" th:text="${index.index+1}"></div>
+                <div class="table_cell" th:text="${worst5Turnover.playerName}"></div>
+                <div class="table_cell" th:text="${worst5Turnover.position}"></div>
+                <div class="table_cell" th:text="${worst5Turnover.backNumber}"></div>
+                <div class="table_cell" th:text="${worst5Turnover.turnover}"></div>
+                <div class="table_cell" th:text="${worst5Turnover.averageTurnover}"></div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

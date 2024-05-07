@@ -21,5 +21,36 @@
         select playerName, position, quarter, point, backNumber, (point / quarter) AS averagePoint
         from player_table
         order by averagePoint DESC
+        limit 5
+    </select>
+    <select id="findTop5Assist" resultType="playerInfoDTO">
+        select playerName, position, backNumber, assist, quarter, (assist / quarter) AS averageAssist
+        from player_table
+        order by averageAssist DESC
+        limit 5
+    </select>
+    <select id="findTop5Steel" resultType="playerInfoDTO">
+        select playerName, position, backNumber, steel, quarter, (steel / quarter) AS averageSteel
+        from player_table
+        order by averageSteel DESC
+        limit 5
+    </select>
+    <select id="findTop5Block" resultType="playerInfoDTO">
+        select playerName, position, backNumber, block, quarter, (block / quarter) AS averageBlock
+        from player_table
+        order by averageBlock DESC
+        limit 5
+    </select>
+    <select id="findTop5Rebound" resultType="playerInfoDTO">
+        select playerName, position, backNumber, Rebound, quarter, (Rebound / quarter) AS averageRebound
+        from player_table
+        order by averageRebound DESC
+        limit 5
+    </select>
+    <select id="findWorst5Turnover" resultType="playerInfoDTO">
+        select playerName, position, backNumber, turnover, quarter, (turnover / quarter) AS averageTurnover
+        from player_table
+        order by averageTurnover DESC
+        limit 5
     </select>
 </mapper>

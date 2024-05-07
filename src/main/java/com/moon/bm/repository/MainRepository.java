@@ -23,4 +23,25 @@ public class MainRepository {
     public List<PlayerInfoDTO> findTop5Point() {
         return sql.selectList("bm.findTop5Point");
     }
+
+    public List<PlayerInfoDTO> findTop5Assist() {
+        return sql.selectList("bm.findTop5Assist");
+    }
+
+    public List<PlayerInfoDTO> findTop5Steel() {
+        return sql.selectList("bm.findTop5Steel");
+    }
+
+
+    public List<PlayerInfoDTO> findTop5Block() {
+        return sql.selectList("bm.findTop5Block");
+    }
+
+    public List<PlayerInfoDTO> findTop5Rebound() {
+        return sql.selectList("bm.findTop5Rebound");
+    }
+
+    public List<PlayerInfoDTO> findWorst5Turnover() {
+        return sql.selectList("bm.findWorst5Turnover");
+    }
 }
