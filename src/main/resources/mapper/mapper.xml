@@ -13,7 +13,7 @@
     </insert>
     <select id="findAll" resultType="playerInfoDTO">
         select playerName, position, age, height, quarter, assist, block, steel,
-        rebound, offensiveRebound, defensiveRebound, turnover, point, backNumber
+        rebound, offensiveRebound, defensiveRebound, turnover, point, backNumber, (point / quarter) AS averagePoint
         from player_table
         order by backNumber DESC
     </select>

@@ -219,5 +219,14 @@
         </div>
     </div>
 </div>
+<script th:inline="javascript">
+    var elements = document.querySelectorAll('.table_cell');
+    for (var i = 0; i < elements.length; i++) {
+        var text = elements[i].innerText;
+        if (!isNaN(parseFloat(text)) && text.includes('.')) {
+            elements[i].innerText = parseFloat(text).toFixed(1);
+        }
+    }
+</script>
 </body>
 </html>
